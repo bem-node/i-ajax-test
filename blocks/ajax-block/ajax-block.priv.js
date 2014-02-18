@@ -19,6 +19,14 @@ BEM.decl('ajax-block', null, {
         return promise;
     },
 
+    complex: function (data) {
+        var promise = Vow.promise();
+        setTimeout(function () {
+            promise.fulfill({title: data});
+        }, 100);
+        return promise;
+    },
+
     denied: function () {
         var promise = Vow.promise();
         setTimeout(function () {
